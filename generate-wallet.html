@@ -99,7 +99,7 @@ function setCryptoCurrency(toThis) {
 	  window.WIFPrefix = '5';
 	  window.compressedWIFPrefix = '[LK]';
 	  break;
-	case 'Litecoin':
+/*	case 'Litecoin':
 		window.networkVersion = 0x30;
 		window.privateKeyPrefix = 0xb0;
 		window.WIFPrefix = '6';
@@ -120,6 +120,7 @@ function setCryptoCurrency(toThis) {
 		window.compressedWIFPrefix = 'c';
 		document.title = 'Bitcoin TESTNET paper wallet generator';
 		break;
+*/
 	default:
 	  alert ('Invalid cryptocurrency "' + toThis + '" at initialization. Defaulting to Bitcoin.');
 	  setCryptoCurrency('Bitcoin');		
