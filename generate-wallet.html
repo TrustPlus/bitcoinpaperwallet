@@ -106,6 +106,13 @@ function setCryptoCurrency(toThis) {
 		window.compressedWIFPrefix = 'T';
 		document.title = 'Litecoin paper wallet generator';
 		break;
+	case 'Dogecoin':
+		window.networkVersion = 0x1e;
+		window.privateKeyPrefix = 0x9e;
+		window.WIFPrefix = '6';
+		window.compressedWIFPrefix = 'Q';	
+		document.title = 'Dogecoin paper wallet generator. Wow! Many coin. Such shiny.';
+		break;
 	case 'Testnet':
 		window.networkVersion = 0x6F;
 		window.privateKeyPrefix = 0xEF;
@@ -128,19 +135,21 @@ function getParameterByName(name) {
 }
 
 var myDesign = getParameterByName('design');
-echo myDesign;
-window.suppliesURL = 'http://trustplus.co/paper/?p=' + myDesign + '#purchase';
+window.suppliesURL = 'https://bitcoinpaperwallet.com/?p=' + myDesign + '#purchase';
 
 switch (myDesign) {
 	case 'alt-litecoin':
 		setCryptoCurrency('Litecoin');
+		break;
+	case 'alt-dogecoin':
+		setCryptoCurrency('Dogecoin');
 		break;
 	case 'alt-testnet':
 		setCryptoCurrency('Testnet');
 		break;
 	default:
 	setCryptoCurrency('Bitcoin');
-	window.suppliesURL = 'http://trustplus.co/paper/#purchase'; // remove special currency flag
+	window.suppliesURL = 'https://bitcoinpaperwallet.com/#purchase'; // remove special currency flag
 } 
 
 </script>
@@ -10513,6 +10522,7 @@ Bitcoin.Util = {
                             <option value="custom">Your own custom Bitcoin design</option>
                             <option value="default">--- Other Cryptocurrencies ---</option>
                             <option value="alt-litecoin">Litecoin LTC</option>
+                            <option value="alt-dogecoin">Dogecoin DOGE</option>
                             <option value="counterparty">Counterparty XCP</option>
                             <option value="alt-testnet">"Testnet"</option>
                           </select>
