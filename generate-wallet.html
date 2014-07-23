@@ -104,29 +104,8 @@ function setCryptoCurrency(toThis) {
 	  window.privateKeyPrefix = 0xC2;
 	  window.WIFPrefix = '7';
 	  window.compressedWIFPrefix = 'X';
+	  document.title = 'TrustPlus Paper Wallet Generator';
 	  break;
-/*	case 'Litecoin':
-		window.networkVersion = 0x30;
-		window.privateKeyPrefix = 0xb0;
-		window.WIFPrefix = '6';
-		window.compressedWIFPrefix = 'T';
-		document.title = 'Litecoin paper wallet generator';
-		break;
-	case 'Dogecoin':
-		window.networkVersion = 0x1e;
-		window.privateKeyPrefix = 0x9e;
-		window.WIFPrefix = '6';
-		window.compressedWIFPrefix = 'Q';	
-		document.title = 'Dogecoin paper wallet generator. Wow! Many coin. Such shiny.';
-		break;
-	case 'Testnet':
-		window.networkVersion = 0x6F;
-		window.privateKeyPrefix = 0xEF;
-		window.WIFPrefix = '9';
-		window.compressedWIFPrefix = 'c';
-		document.title = 'Bitcoin TESTNET paper wallet generator';
-		break;
-*/
 	default:
 	  alert ('Invalid cryptocurrency "' + toThis + '" at initialization. Defaulting to BitCoin.');
 	  setCryptoCurrency('Bitcoin');		
@@ -148,16 +127,6 @@ switch (myDesign) {
 	case 'alt-trustplus'
 		setCryptoCurrency('TrustPlus')
 		break;
-/*	case 'alt-litecoin':
-		setCryptoCurrency('Litecoin');
-		break;
-	case 'alt-dogecoin':
-		setCryptoCurrency('Dogecoin');
-		break;
-	case 'alt-testnet':
-		setCryptoCurrency('Testnet');
-		break;
-*/
 	default:
 	setCryptoCurrency('BitCoin');
 	window.suppliesURL = 'https://bitcoinpaperwallet.com/#purchase'; // remove special currency flag
@@ -10522,7 +10491,7 @@ Bitcoin.Util = {
                         <p><a href="https://bitcoinpaperwallet.com/#security" target="_blank">More security tips and answers to frequently asked questions &raquo;</a></p>
                         
                         </div>
-						<span id="instructions2">
+			<span id="instructions2">
                         <p style="margin-top: 0;"><strong>Change your wallet's design, language, or cryptocurrency here:</strong>
                           <select name="designPicker" id="designPicker" style="font-size: 12px;" onChange="setDesign(this.value, false);">
                             <option value="default">BitCoin</option>
