@@ -99,6 +99,12 @@ function setCryptoCurrency(toThis) {
 	  window.WIFPrefix = '5';
 	  window.compressedWIFPrefix = '[LK]';
 	  break;
+	case 'TrustPlus':	
+	  window.networkVersion = 0x42;
+	  window.privateKeyPrefix = 0x80;
+	  window.WIFPrefix = '5';
+	  window.compressedWIFPrefix = '[LK]';
+	  break;
 /*	case 'Litecoin':
 		window.networkVersion = 0x30;
 		window.privateKeyPrefix = 0xb0;
