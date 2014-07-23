@@ -93,7 +93,7 @@ function setCryptoCurrency(toThis) {
 	window.currencyName = toThis;
 	switch (toThis)
 	{
-	case 'BitCoin':	
+	case 'Bitcoin':	
 	  window.networkVersion = 0x00;
 	  window.privateKeyPrefix = 0x80;
 	  window.WIFPrefix = '5';
@@ -107,8 +107,8 @@ function setCryptoCurrency(toThis) {
 	  document.title = 'TrustPlus Paper Wallet Generator';
 	  break;
 	default:
-	  alert ('Invalid cryptocurrency "' + toThis + '" at initialization. Defaulting to BitCoin.');
-	  setCryptoCurrency('BitCoin');		
+	  alert ('Invalid cryptocurrency "' + toThis + '" at initialization. Defaulting to Bitcoin.');
+	  setCryptoCurrency('Bitcoin');		
 	} // eof switch
 	return (true);
 }
@@ -128,7 +128,7 @@ switch (myDesign) {
 		setCryptoCurrency('TrustPlus')
 		break;
 	default:
-	setCryptoCurrency('BitCoin');
+	setCryptoCurrency('Bitcoin');
 	window.suppliesURL = 'https://bitcoinpaperwallet.com/#purchase'; // remove special currency flag
 } 
 
