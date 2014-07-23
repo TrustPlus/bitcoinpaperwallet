@@ -93,7 +93,7 @@ function setCryptoCurrency(toThis) {
 	window.currencyName = toThis;
 	switch (toThis)
 	{
-	case 'Bitcoin':	
+	case 'BitCoin':	
 	  window.networkVersion = 0x00;
 	  window.privateKeyPrefix = 0x80;
 	  window.WIFPrefix = '5';
@@ -108,7 +108,7 @@ function setCryptoCurrency(toThis) {
 	  break;
 	default:
 	  alert ('Invalid cryptocurrency "' + toThis + '" at initialization. Defaulting to BitCoin.');
-	  setCryptoCurrency('Bitcoin');		
+	  setCryptoCurrency('BitCoin');		
 	} // eof switch
 	return (true);
 }
