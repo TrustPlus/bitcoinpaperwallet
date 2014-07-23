@@ -128,8 +128,8 @@ function setCryptoCurrency(toThis) {
 		break;
 */
 	default:
-	  alert ('Invalid cryptocurrency "' + toThis + '" at initialization. Defaulting to TrustPlus.');
-	  setCryptoCurrency('TrustPlus');		
+	  alert ('Invalid cryptocurrency "' + toThis + '" at initialization. Defaulting to BitCoin.');
+	  setCryptoCurrency('Bitcoin');		
 	} // eof switch
 	return (true);
 }
@@ -146,7 +146,7 @@ window.suppliesURL = 'https://bitcoinpaperwallet.com/?p=' + myDesign + '#purchas
 
 switch (myDesign) {
 	case 'alt-bitcoin'
-		setCryptoCurrency('BitCoin')
+		setCryptoCurrency('TrustPlus')
 		break;
 /*	case 'alt-litecoin':
 		setCryptoCurrency('Litecoin');
@@ -159,7 +159,7 @@ switch (myDesign) {
 		break;
 */
 	default:
-	setCryptoCurrency('TrustPlus');
+	setCryptoCurrency('BitCoin');
 	window.suppliesURL = 'https://bitcoinpaperwallet.com/#purchase'; // remove special currency flag
 } 
 
@@ -10525,8 +10525,8 @@ Bitcoin.Util = {
 						<span id="instructions2">
                         <p style="margin-top: 0;"><strong>Change your wallet's design, language, or cryptocurrency here:</strong>
                           <select name="designPicker" id="designPicker" style="font-size: 12px;" onChange="setDesign(this.value, false);">
-                            <option value="default">TrustPlus</option>
-                            <option value="alt-bitcoin">BitCoin</option>>
+                            <option value="default">BitCoin</option>
+                            <option value="alt-TrustPlus">TrustPlus</option>>
                           </select>
                           <select name="langPicker" id="langPicker" style="font-size: 12px; display: inline;" onChange="setDesign('default', false, this.value);">
                             <option value="english">English</option>
