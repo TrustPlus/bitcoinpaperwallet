@@ -106,13 +106,6 @@ function setCryptoCurrency(toThis) {
 		window.compressedWIFPrefix = 'T';
 		document.title = 'Litecoin paper wallet generator';
 		break;
-	case 'Dogecoin':
-		window.networkVersion = 0x1e;
-		window.privateKeyPrefix = 0x9e;
-		window.WIFPrefix = '6';
-		window.compressedWIFPrefix = 'Q';	
-		document.title = 'Dogecoin paper wallet generator. Wow! Many coin. Such shiny.';
-		break;
 	case 'TrustPlus':	
 		window.networkVersion = 0x42;
 		window.privateKeyPrefix = 0xC2;
@@ -148,9 +141,6 @@ window.suppliesURL = 'http://trustplus.co/paper/?p=' + myDesign + '#purchase';
 switch (myDesign) {
 	case 'alt-litecoin':
 		setCryptoCurrency('Litecoin');
-		break;
-	case 'alt-dogecoin':
-		setCryptoCurrency('Dogecoin');
 		break;
 	case 'alt-testnet':
 		setCryptoCurrency('Testnet');
@@ -10533,7 +10523,6 @@ Bitcoin.Util = {
                             <option value="custom">Your own custom Bitcoin design</option>
                             <option value="default">--- Other Cryptocurrencies ---</option>
                             <option value="alt-litecoin">Litecoin LTC</option>
-                            <option value="alt-dogecoin">Dogecoin DOGE</option>
                             <option value="counterparty">Counterparty XCP</option>
                             <option value="alt-trustplus">TrustPlus</option>
                             <option value="alt-testnet">"Testnet"</option>
