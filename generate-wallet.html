@@ -106,14 +106,6 @@ function setCryptoCurrency(toThis) {
 		window.compressedWIFPrefix = 'T';
 		document.title = 'Litecoin paper wallet generator';
 		break;
-	case 'TrustPlus':	
-		window.networkVersion = 0x42;
-		window.privateKeyPrefix = 0xC2;
-		window.WIFPrefix = '7';
-		window.compressedWIFPrefix = 'T';
-		document.title = 'TrustPlus Paper Wallet Generator';
-		break;
-	default:
 	case 'Testnet':
 		window.networkVersion = 0x6F;
 		window.privateKeyPrefix = 0xEF;
@@ -145,9 +137,6 @@ switch (myDesign) {
 		break;
 	case 'alt-testnet':
 		setCryptoCurrency('Testnet');
-		break;
-	case 'alt-trustplus':
-		setCryptoCurrency('TrustPlus');
 		break;
 	default:
 	setCryptoCurrency('Bitcoin');
@@ -10525,7 +10514,6 @@ Bitcoin.Util = {
                             <option value="default">--- Other Cryptocurrencies ---</option>
                             <option value="alt-litecoin">Litecoin LTC</option>
                             <option value="counterparty">Counterparty XCP</option>
-                            <option value="alt-trustplus">TrustPlus</option>
                             <option value="alt-testnet">"Testnet"</option>
                           </select>
                           <select name="langPicker" id="langPicker" style="font-size: 12px; display: inline;" onChange="setDesign('default', false, this.value);">
